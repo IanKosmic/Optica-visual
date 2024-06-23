@@ -26,10 +26,10 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 1rem;
+    position: relative;
 }
-
 
 .menu-items {
     list-style: none;
@@ -86,11 +86,15 @@ h1 {
 @media (max-width: 768px) {
     nav {
         flex-direction: row;
-        align-items: center;
+        align-items:center;
     }
 
+    .menu {
+        padding-bottom: 1rem;
+    }
 
     .menu h1 {
+        order: 0;
         margin: 0;
         padding: 1rem 0;
         text-align: center;
@@ -111,7 +115,6 @@ h1 {
         width: 2.5rem;
         height: auto;
         filter: invert(100%);
-
     }
 
     .axolotl {
@@ -120,16 +123,23 @@ h1 {
     }
 
     .menu-items {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+        justify-content: space-between;
         width: 100%;
         display: none;
-        background-color: #7c4035;
+        background-color: #9f2241;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: .5rem;
+        margin-top: .2rem;
     }
 
-    .menu-items li {
-        width: 100%;
-        text-align: left;
+    .menu-items li a{
+        width: 90%;
+        text-align: center;
     }
 
     .menu:hover .menu-items {
