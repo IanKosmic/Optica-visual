@@ -120,11 +120,12 @@ h1 {
     .axolotl {
         margin: 0;
         width: 100%;
+        max-width: 58px;
     }
 
     .menu-items {
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items:center;
         justify-content: space-between;
         width: 100%;
         display: none;
