@@ -1,3 +1,4 @@
+/* styles.css */
 html {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:  #333;
+    background-color: #333;
 }
 
 header {
@@ -19,34 +20,43 @@ header {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    position: relative;
 }
 
-nav ul {
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.menu-items {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
+.menu-items li {
+    margin: 0;
 }
 
-nav ul li a {
+.menu-items a {
     color: white;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+.menu-items a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .menu img {
-    width: 15%;
-    height: 15%;
+    width: 40px;
+    height: 40px;
 }
 
 .axolotl {
@@ -57,29 +67,64 @@ nav ul li a {
 }
 
 h1 {
-    margin-top: 2%;
-    margin: 5%;
-    border: 1rem;
-    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 .icon {
+    display: none;
     border: 0;
     padding: .2rem;
     margin-left: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
-    max-width: 13%;
+    max-width: 40px;
+    cursor: pointer;
 }
 
-main {
-    padding: 2rem;
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu h1 {
+        order: -1;
+        margin: 0;
+        padding: 1rem 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .axolotl {
+        order: -1;
+        margin: 0;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+        background-color: #7c4035;
+    }
+
+    .menu-items li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu:hover .menu-items {
+        display: flex;
+    }
 }
 
-/* Media Queries para diseño responsivo 
 @media (max-width: 600px) {
     nav ul li {
         display: block;
         margin: 0.5rem 0;
     }
 }
-*/
