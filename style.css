@@ -30,6 +30,7 @@ nav {
     padding: 0 1rem;
 }
 
+
 .menu-items {
     list-style: none;
     padding: 0;
@@ -47,6 +48,7 @@ nav {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
+    border-color: #ffffff;
     transition: background-color 0.3s;
 }
 
@@ -55,8 +57,8 @@ nav {
 }
 
 .menu img {
-    width: 40px;
-    height: 40px;
+    width: max-content;
+    height: max-content;
 }
 
 .axolotl {
@@ -77,31 +79,44 @@ h1 {
     padding: .2rem;
     margin-left: 1rem;
     background-color: rgba(255, 255, 255, 0.2);
-    max-width: 40px;
+    width: 100%;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
     }
 
+
     .menu h1 {
-        order: -1;
         margin: 0;
         padding: 1rem 0;
-        text-align: left;
+        text-align: center;
         width: 100%;
     }
 
     .icon {
         display: block;
+        margin: 0;
+        width: auto;
+        border-radius: 100%;
+        background-color: #9f2241;
+        padding: 1%;
+    }
+
+    .icon img {
+        margin: 0;
+        width: 2.5rem;
+        height: auto;
+        filter: invert(100%);
+
     }
 
     .axolotl {
-        order: -1;
         margin: 0;
+        width: 100%;
     }
 
     .menu-items {
